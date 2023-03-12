@@ -39,7 +39,7 @@ body {
   position: absolute;
 }
 
-.acc-input:checked + .content {
+.acc-input:checked ~ .content {
   display: block;
 }
 
@@ -50,17 +50,9 @@ body {
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
+  font-family: 'FontAwesome';
 }
 
-.acc-input:checked ~ .acc-label {
-  color: black;
-}
-
-.acc-input:checked ~ .acc-label:after {
+.acc-input:checked + .acc-label:after {
   content: '\f00d';
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
 }
