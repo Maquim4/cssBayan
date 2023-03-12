@@ -1,0 +1,66 @@
+body {
+  background-color: #fcfcee;
+}
+
+.accordion {
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color: #fcfcee;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 45px 45px;
+}
+
+.container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.content {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.acc-label {
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.acc-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+
+.acc-input:checked + .content {
+  display: block;
+}
+
+.acc-label:after {
+  content: '\2b';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.acc-input:checked ~ .acc-label {
+  color: black;
+}
+
+.acc-input:checked ~ .acc-label:after {
+  content: '\f00d';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
